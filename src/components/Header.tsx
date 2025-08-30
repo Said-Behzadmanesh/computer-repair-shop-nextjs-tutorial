@@ -4,6 +4,7 @@ import { File, HomeIcon, UsersRound } from "lucide-react";
 import NavButton from "./NavButton";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ModeToggle } from "./ModeToggle";
 
 export function Header() {
   const pathname = usePathname();
@@ -29,6 +30,7 @@ export function Header() {
         <div className="flex items-center">
           <NavButton icon={File} label="Tickets" href="/tickets" />
           <NavButton icon={UsersRound} label="Customers" href="/customers" />
+          <ModeToggle />
         </div>
       </div>
     </header>
